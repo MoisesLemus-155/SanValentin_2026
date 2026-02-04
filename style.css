@@ -21,7 +21,7 @@ body, html {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url('assets/Fondo_Romantico.png') no-repeat center center;
+    background: url('assets/Fondo_Romantico.webp') no-repeat center center;
     background-size: cover;
     display: flex;
     justify-content: center;
