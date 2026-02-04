@@ -21,7 +21,6 @@ body, html {
     position: relative;
     width: 100%;
     height: 100vh;
-    /* Asegúrate que la ruta sea correcta */
     background: url('assets/Fondo_Romantico.png') no-repeat center center;
     background-size: cover;
     display: flex;
@@ -60,35 +59,32 @@ body, html {
     filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3)); /* Sombra para realismo */
 }
 
-/* ESTILO CORREGIDO PARA CENTRAR EL TEXTO */
+/* ESTILO PARA LAS DOS LÍNEAS Y MEJOR VISIBILIDAD */
 .texto-cartel {
     position: absolute;
-    /* Ajustes finos para colocarlo sobre el área blanca del dibujo */
     top: 58%;
     left: 50%;
     transform: translate(-50%, -50%);
     
-    /* Definimos un área para el texto */
     width: 68%;
     height: 30%;
     
-    /* Flexbox para centrado perfecto horizontal y vertical */
     display: flex;
     justify-content: center;
     align-items: center;
     
     text-align: center;
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #2c2c2c;
-    line-height: 1.1;
-    font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif; /* Fuente tipo mano */
+    font-size: 1.6rem; /* Letra más grande */
+    font-weight: 900; /* Más gruesa para que se lea bien */
+    color: #1a1a1a; /* Un tono más oscuro para contraste */
+    line-height: 1.2; /* Espaciado entre las dos líneas */
+    font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
 }
 
 /* --- INTERFAZ (BOTONES) --- */
 .UI-container {
     position: absolute;
-    bottom: 30px;
+    bottom: 10%; /* Subido de 30px a 10% para que no esté pegado abajo */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -120,11 +116,11 @@ button {
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efecto rebote */
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     font-weight: bold;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     outline: none;
-    -webkit-tap-highlight-color: transparent; /* Quita el destello en móvil */
+    -webkit-tap-highlight-color: transparent;
 }
 
 button:active { transform: scale(0.95); }
@@ -152,7 +148,7 @@ button:active { transform: scale(0.95); }
 
 /* --- PANTALLA FINAL --- */
 #celebracion {
-    display: none; /* Se activa con JS */
+    display: none;
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0,0,0,0.92);
@@ -177,25 +173,23 @@ button:active { transform: scale(0.95); }
 }
 
 /* =========================================
-   RESPONSIVE: AJUSTES PARA CELULAR
+    RESPONSIVE: AJUSTES PARA CELULAR
 ========================================= */
 @media (max-width: 768px) {
-    /* Hacemos al personaje más pequeño para dar espacio a la UI */
     .personaje-container {
-        height: 65vh;
+        height: 65vh; /* Mantenemos el dibujo un poco más pequeño en móvil */
     }
     
-    /* Ajustamos el texto del cartel para pantallas pequeñas */
     .texto-cartel {
-        font-size: 0.9rem;
+        font-size: 1.1rem; /* Ajustado para que las dos líneas quepan bien */
         width: 62%;
         height: 25%;
-        top: 59%; /* Pequeño ajuste de posición vertical */
+        top: 60%; /* Ajuste fino de posición vertical en móvil */
     }
     
-    /* Subimos la UI un poco y reducimos tamaños */
+    /* CAMBIO CLAVE: SUBIMOS LA UI EN MÓVIL */
     .UI-container {
-        bottom: 20px;
+        bottom: 18%; /* Subido drásticamente para evitar barras de navegación */
     }
     
     .pregunta {
@@ -205,7 +199,7 @@ button:active { transform: scale(0.95); }
     }
     
     button {
-        padding: 12px 20px;
+        padding: 15px 25px; /* Botones más fáciles de tocar con el dedo */
         font-size: 1rem;
     }
 
